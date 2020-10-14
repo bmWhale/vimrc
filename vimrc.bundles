@@ -1,0 +1,14 @@
+" ==========================================
+" bundle 插件管理和配置项
+" ==========================================
+" ----------------------------------------------------------------------------
+" 使用 vim-plug 管理插件
+" vim plugin bundle control, command model
+" ----------------------------------------------------------------------------
+call plug#begin('~/.vim/bundle')
+" ==========================================
+" A plugin of NERDTree showing git status flags.
+" ==========================================
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+            \ Plug 'ryanoasis/vim-devicons'

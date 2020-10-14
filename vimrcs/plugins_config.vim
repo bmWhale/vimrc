@@ -84,12 +84,22 @@ set grepprg=/bin/grep\ -nH
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__','\.swp']
 let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
-
+" " 显示行号
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
+" " 是否显示隐藏文件
+let NERDTreeShowHidden=1
+" " 设置宽度
+let NERDTreeWinSize=31
+" " 在终端启动vim时，共享NERDTree
+" let g:nerdtree_tabs_open_on_console_startup=1
+" " 显示书签列表
+let NERDTreeShowBookmarks=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
