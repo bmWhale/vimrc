@@ -36,6 +36,8 @@ set history=500
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
+" 检测文件类型
+filetype on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -180,8 +182,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-" set shiftwidth=4
-" set tabstop=4
+set shiftwidth=4
+set tabstop=4
 
 " Linebreak on 500 characters
 set lbr

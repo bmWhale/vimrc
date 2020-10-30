@@ -76,7 +76,13 @@ set grepprg=/bin/grep\ -nH
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__','\.swp']
-let g:NERDTreeWinSize=35
+" " 设置宽度
+
+fun! NerdTreeWinSize( arg )
+  let g:NERDTreeWinSize=a:arg
+endfunction
+command! -nargs=* Ntws call NerdTreeWinSize( '<args>' ) | NERDTree
+
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
@@ -85,12 +91,41 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 " " 是否显示隐藏文件
 let NERDTreeShowHidden=1
-" " 设置宽度
-let NERDTreeWinSize=31
 " " 在终端启动vim时，共享NERDTree
 " let g:nerdtree_tabs_open_on_console_startup=1
 " " 显示书签列表
 let NERDTreeShowBookmarks=1
+nmap <F7> :TlistToggle<CR><CR>
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+set ut=100
+
+map <F7> :Tlist<CR>
+"Open and close all the threee plugings on the same time
+nmap <F8> :TrinityToggleAll<CR>
+" Open and close the srcepl.vim separately
+nmap <F9> :TrinityToggleSourceExplorer<CR>
+"Open and close the taglist.vim separately
+" nmap <F10> :TrinityToggleTagList<CR>
+nmap <F10> :TrinityToggleNERDTree<CR>
+let NERDTreeWinPos=1
+
+nmap <F12> :SrcExplToggle<CR>
+let g:SrcExpl_pluginList = [ "__Tag_List__","_NERD_tree_"]
+
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+ \ 'Modified'  :'✹',
+ \ 'Staged'    :'✚',
+ \ 'Untracked' :'✭',
+ \ 'Renamed'   :'➜',
+ \ 'Unmerged'  :'═',
+ \ 'Deleted'   :'✖',
+ \ 'Dirty'     :'✗',
+ \ 'Ignored'   :'☒',
+ \ 'Clean'     :'✔︎',
+ \ 'Unknown'   :'?',
+ \ }
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
