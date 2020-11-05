@@ -17,6 +17,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            " required
 "-------------- PLUGINS END --------------------
 filetype plugin indent on    " required
