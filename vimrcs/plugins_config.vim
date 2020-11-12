@@ -100,11 +100,11 @@ let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 set ut=100
 
-map <F7> :Tlist<CR>
+nmap <F7> :TrinityToggleSourceExplorer<CR>
 "Open and close all the threee plugings on the same time
 nmap <F8> :TrinityToggleAll<CR>
 " Open and close the srcepl.vim separately
-nmap <F9> :TrinityToggleSourceExplorer<CR>
+map <F9> :Tlist<CR>
 "Open and close the taglist.vim separately
 " nmap <F10> :TrinityToggleTagList<CR>
 nmap <F10> :TrinityToggleNERDTree<CR>
@@ -224,9 +224,13 @@ nnoremap <leader>v :.GBrowse!<CR>
 xnoremap <leader>v :'<'>GBrowse!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Git gutter (Git diff)
+" => YouCompleteMe 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"youcompleteme"
+
+let g:ycm_auto_trigger=1
+map <leader>g :let g:ycm_auto_trigger=1<cr>
+map <leader>h :let g:ycm_auto_trigger=0<cr>
+
 "默认配置文件路径"
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'       "配置全局路径
 "log"
@@ -237,7 +241,7 @@ let g:ycm_server_python_interpreter = ''
 "let g:ycm_confirm_extra_conf=0
 "set completeopt=longest,menu
 "python解释器路径"
-let g:ycm_path_to_python_interpreter='/home/wdh/anaconda3/bin/python3'
+let g:ycm_path_to_python_interpreter='/usr/bin/python3'
 "let g:ycm_python_binary_path = '/home/wdh/anaconda3/bin/python3'   "python 环境
 "是否开启语义补全"
 let g:ycm_seed_identifiers_with_syntax=1
