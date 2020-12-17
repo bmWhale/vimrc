@@ -95,14 +95,14 @@ let NERDTreeShowHidden=1
 " let g:nerdtree_tabs_open_on_console_startup=1
 " " 显示书签列表
 let NERDTreeShowBookmarks=1
-nmap <F7> :TlistToggle<CR><CR>
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 set ut=100
 
-nmap <F7> :TrinityToggleSourceExplorer<CR>
+"nmap <F7> :TlistToggle<CR><CR>
+nmap <F6> :TrinityToggleSourceExplorer<CR>
 "Open and close all the threee plugings on the same time
-nmap <F8> :TrinityToggleAll<CR>
+nmap <F7> :TrinityToggleAll<CR>
 " Open and close the srcepl.vim separately
 map <F9> :Tlist<CR>
 "Open and close the taglist.vim separately
@@ -267,3 +267,11 @@ let g:ycm_show_diagnostics_ui = 0
 "inoremap <expr> <Up>       pumvisible() ? '\<C-p>' : '\<Up>'
 "inoremap <expr> <PageDown> pumvisible() ? '\<PageDown>\<C-p>\<C-n>' : '\<PageDown>'
 "inoremap <expr> <PageUp>   pumvisible() ? '\<PageUp>\<C-p>\<C-n>' : '\<PageUp>'\
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tagbar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"nmap <Leader>tb :TagbarToggle<CR>      "快捷鍵設定
+let g:tagbar_ctags_bin='ctags'          "ctags程式的路徑
+let g:tagbar_width=50                   "視窗寬度的設定
+map <F8> :Tagbar<CR>
+"autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()  "如果是c語言的程式的話，tagbar自動開啟
