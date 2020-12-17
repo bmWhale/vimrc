@@ -14,6 +14,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'wesleyche/Trinity'
+Plugin 'wesleyche/SrcExpl'
+Plugin 'majutsushi/tagbar'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'junegunn/vim-easy-align'
@@ -131,4 +135,4 @@ nmap ze :cs find e <C-R>=expand("<cword>")<CR><CR>
 nmap zf :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap zi :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap zd :cs find d <C-R>=expand("<cword>")<CR><CR>
-
+map <F5> :!csdb_update <CR>:cs reset<CR><CR>   
