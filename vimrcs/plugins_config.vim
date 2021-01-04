@@ -232,7 +232,8 @@ map <leader>g :let g:ycm_auto_trigger=1<cr>
 map <leader>h :let g:ycm_auto_trigger=0<cr>
 
 "默认配置文件路径"
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'       "配置全局路径
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'       "配置全局路径
+let g:ycm_global_ycm_extra_conf = "~/.vim_runtime/.ycm_c-c++_conf.py"
 "log"
 let g:ycm_server_python_interpreter = ''
 "let g:ycm_server_keep_logfiles=1
