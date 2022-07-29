@@ -136,3 +136,11 @@ nmap zf :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap zi :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap zd :cs find d <C-R>=expand("<cword>")<CR><CR>
 map <F5> :!csdb_update <CR>:cs reset<CR><CR>   
+
+"只针对特定类型文件自动开启空格和 tab 字符可见
+" 创建一个新的 MyTabSpace 组,并设置它的颜色
+highlight MyTabSpace guifg=darkgrey ctermfg=darkgrey
+" 指定tab字符和空格的颜色组为MyTabSpace,不同字符串之间用|隔开,要使用\|转义.
+match MyTabSpace /\t\| /
+" 针对特定类型的代码文件,设置显示Tab键和行尾空格以便在查看代码时注意到它们
+autocmd FileType c,cpp,java,xml setlocal list | set listchars=tab:>~,trail:.
