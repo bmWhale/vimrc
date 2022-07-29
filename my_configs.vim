@@ -71,7 +71,7 @@ if has("autocmd")
   augroup END
 endif
 
-if has("cscope") && filereadable("/usr/bin/cscope")
+if has("cscope") && filereadable("/usr/local/bin/cscope")
    set csprg=cscope
    set csto=0
    set cst
