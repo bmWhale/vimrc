@@ -144,3 +144,7 @@ match MyTabSpace /\t\| /
 " 针对特定类型的代码文件,设置显示Tab键和行尾空格以便在查看代码时注意到它们
 autocmd FileType perl,sh,conf,kconfig,cmake,make,markdown,c,cpp,java,xml,go,asm setlocal list | set listchars=tab:>-,trail:. | set lcs+=space:·
 
+" To disable Control-a triggering default vim auto-increment on a number
+map <C-a> <Nop>
+map <C-x> <Nop>
+
